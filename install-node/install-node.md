@@ -24,6 +24,10 @@ cd start-react
 npm start
 ```
 
+# Install new dependencies
+```bash
+npm install --save faker
+```
 # Deploy
 
 The build folder is ready to be deployed.
