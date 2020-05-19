@@ -5,7 +5,7 @@ function getTime() {
 };
 
 const CommentDetail = props => {
-    console.log(props);
+    console.log(props.author);
     return (
         <div className="comment">
             <a href="/" className="avatar">
