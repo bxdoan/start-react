@@ -25,6 +25,7 @@ export default function Login({ setToken }) {
             password
         });
         setToken(token);
+        window.open("/dashboard", "_self");
     }
 
     return(
