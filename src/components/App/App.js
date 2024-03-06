@@ -5,6 +5,7 @@ import "./index.css";
 import Dashboard from "../Dashboard/Dashboard";
 import Login from "../Login/Login";
 import Otp from "../Otp/Otp";
+import Game from "../Tic/Tic";
 
 
 function setToken(userToken) {
@@ -13,13 +14,13 @@ function setToken(userToken) {
     sessionStorage.setItem('token', token);
 }
 
-function getToken() {
-    const tokenString = sessionStorage.getItem('token');
-    console.log(`tokenString: ${tokenString}`);
-    const userToken = JSON.parse(tokenString);
-    console.log(`userToken: ${userToken.token}`);
-    return userToken?.token
-}
+// function getToken() {
+//     const tokenString = sessionStorage.getItem('token');
+//     console.log(`tokenString: ${tokenString}`);
+//     const userToken = JSON.parse(tokenString);
+//     console.log(`userToken: ${userToken.token}`);
+//     return userToken?.token
+// }
 
 export default function App() {
     // const token = getToken();
@@ -34,12 +35,10 @@ export default function App() {
                 <h1>Application</h1>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/dashboard" element={<Dashboard />}>
-                        </Route>
-                        <Route path="/login" element={<Login setToken={setToken} />}>
-                        </Route>
-                        <Route path="/otp" element={<Otp />}>
-                        </Route>
+                        <Route path="/dashboard" element={<Dashboard />}></Route>
+                        <Route path="/login" element={<Login setToken={setToken} />}></Route>
+                        <Route path="/otp" element={<Otp />}></Route>
+                        <Route path="/tictactoe" element={<Game />}></Route>
                     </Routes>
                 </BrowserRouter>
             </StrictMode>
