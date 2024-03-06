@@ -4,6 +4,7 @@ import "./index.css";
 
 import Dashboard from "../Dashboard/Dashboard";
 import Login from "../Login/Login";
+import Otp from "../Otp/Otp";
 
 
 function setToken(userToken) {
@@ -21,11 +22,11 @@ function getToken() {
 }
 
 export default function App() {
-    const token = getToken();
+    // const token = getToken();
 
-    if(!token) {
-        return <Login setToken={setToken} />
-    }
+    // if(!token) {
+    //     return <Login setToken={setToken} />
+    // }
 
     return (
         <div className="wrapper">
@@ -36,6 +37,8 @@ export default function App() {
                         <Route path="/dashboard" element={<Dashboard />}>
                         </Route>
                         <Route path="/login" element={<Login setToken={setToken} />}>
+                        </Route>
+                        <Route path="/otp" element={<Otp />}>
                         </Route>
                     </Routes>
                 </BrowserRouter>
